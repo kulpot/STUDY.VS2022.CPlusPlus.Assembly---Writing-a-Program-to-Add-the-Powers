@@ -15,7 +15,7 @@ doit proc
 		; requires self implementation knowledge
 	; 3square = 3 x 3 = 9	; total sum 12, total hex C
 	; 3^5 = 3x3x3x3x3=243	; total sum 363, total hex 16B
-;	 loop(eax)		Power(ebx)		totalSum(ecx)		totalHex
+;	 loop(ebx)		Power(eax)		totalSum(ecx)		totalHex
 ;		3^1				3				3					3
 ;		3^2				9				12					C
 ;		3^3				27				39					27
@@ -24,14 +24,14 @@ doit proc
 	; program challenge: 3^1 + 3^2 + 3^3 + 3^4 + ..... + 3^100
 	
 	; ----- initialization -----
-	mov eax, 3
-	mov	ebx, 1
-	xor ecx, exc
+	mov eax, 1
+	mov	ebx, 3
+	xor ecx, ecx
 
 again:
-	mul ebx, eax
-	add ecx, ebx
-	cmp ebx, 243
+	mul ebx, eax		
+	add ecx, eax
+	cmp eax, 243
 	jl again
 
 	ret
