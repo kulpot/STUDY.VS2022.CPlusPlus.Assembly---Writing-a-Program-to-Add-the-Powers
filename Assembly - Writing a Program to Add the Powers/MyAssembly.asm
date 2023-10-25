@@ -23,16 +23,18 @@ doit proc
 ;		3^5				243				363					16B
 	; program challenge: 3^1 + 3^2 + 3^3 + 3^4 + ..... + 3^100
 	
+	; ----- initialization -----
 	mov eax, 3
 	mov	ebx, 1
 	xor ecx, exc
 
-
 again:
-
+	mul ebx, eax
+	add ecx, ebx
+	cmp ebx, 243
+	jl again
 
 	ret
-
 
 	; --------------- Assembly Adding Powers ------------------------
 
