@@ -10,6 +10,25 @@ doit proc
 
 	; this is a comment i can type whatever i like after a semicolon and assembler will ignore it
 	
+	; ----------------- Assembly - Writing a Program to Add the Powers -------------------------
+
+		; requires self implementation knowledge
+	; 3square = 3 x 3 = 9	; total sum 12, total hex C
+	; 3^5 = 3x3x3x3x3=243	; total sum 363, total hex 16B
+;	 loop(eax)		Power(ebx)		totalSum(ecx)		totalHex
+;		3^1				3				3					3
+;		3^2				9				12					C
+;		3^3				27				39					27
+;		3^4				81				120					78
+;		3^5				243				363					16B
+	; program challenge: 3^1 + 3^2 + 3^3 + 3^4 + ..... + 3^100
+
+
+
+
+	ret
+
+
 	; --------------- Assembly Adding Powers ------------------------
 
 	; requires self implementation knowledge
@@ -23,7 +42,7 @@ doit proc
 ;		3^5				243				363					16B
 	; program challenge: 3^1 + 3^2 + 3^3 + 3^4 + ..... + 3^100
 
-	ret
+	;ret
 
 	; ---------- Subtle Assembly Bugs --------------------
 	
