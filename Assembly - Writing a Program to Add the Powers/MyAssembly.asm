@@ -22,8 +22,13 @@ doit proc
 ;		3^4				81				120					78
 ;		3^5				243				363					16B
 	; program challenge: 3^1 + 3^2 + 3^3 + 3^4 + ..... + 3^100
+	
+	mov eax, 3
+	mov	ebx, 1
+	xor ecx, exc
 
 
+again:
 
 
 	ret
